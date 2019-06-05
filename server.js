@@ -9,6 +9,11 @@ var online = 0;
 var roomList = [];
 roomList.push([]);
 
+/**
+ * { ROOM: { 500: { x y z }}}
+ */
+
+
 const update = setInterval(() => {
 	for (var i = 0; i < roomList.length; i++) {
 		io.sockets.in(roomList[i]).emit('update', roomList[i]);
